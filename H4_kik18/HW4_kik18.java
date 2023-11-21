@@ -9,7 +9,7 @@
  * - create a hashtable
  * - insertLinearProbe inserts an array of integer keys using linear probing
  * - insertDoubleHash inserts an array of integer keys using double hashing with function hash(key) = 7 - key % 7
- * - tester written in main method of HW4_kik18 class,
+ * - tester written in main method of HW4_kik18 class
  * 
  */
 
@@ -108,19 +108,22 @@ class HashTable {
 
 class HW4_kik18 {
     public static void main(String[] args) {
+        // executes part 1 of written assignment
         System.out.println("PART ONE");
-        HashTable partOne = new HashTable(10);
-        int[] partOneKeys = {14, 17, 18, 3, 8, 1, 18, 11, 13, 20};
-        partOne.insertLinearProbe(partOneKeys);
+        HashTable partOne = new HashTable(10); // create hash table of size 10
+        int[] partOneKeys = {14, 17, 18, 3, 8, 1, 18, 11, 13, 20}; // keys to be added
+        partOne.insertLinearProbe(partOneKeys); // insert the keys via linear probing
 
+        // executes part 2a of written assignment
         System.out.println("\nPART TWO A");
-        HashTable partTwoA = new HashTable(10);
-        int[] partTwoAKeys = {2, 12, 22, 32, 42, 52, 62, 72, 82, 92};
-        partTwoA.insertLinearProbe(partTwoAKeys);
+        HashTable partTwoA = new HashTable(10); // create hash table of size 10
+        int[] partTwoAKeys = {2, 12, 22, 32, 42, 52, 62, 72, 82, 92}; // keys to be added
+        partTwoA.insertLinearProbe(partTwoAKeys); // insert the keys via linear probing (inefficient)
 
+        // executes part 2b of written assignment
         System.out.println("\nPART TWO B");
-        HashTable partTwoB = new HashTable(20);
-        int[] partTwoBKeys = {2, 12, 22, 32, 42, 52, 62, 72, 82, 92, 14, 17, 18, 3, 8, 1, 18, 11, 13, 20};
-        partTwoB.insertDoubleHash(partTwoBKeys);
+        HashTable partTwoB = new HashTable(20); // create hash table of size 20
+        int[] partTwoBKeys = {2, 12, 22, 32, 42, 52, 62, 72, 82, 92, 14, 17, 18, 3, 8, 1, 18, 11, 13, 20}; // keys to be added
+        partTwoB.insertDoubleHash(partTwoBKeys); // insert all keys via double hashing
     }
 }
