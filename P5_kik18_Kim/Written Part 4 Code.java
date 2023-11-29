@@ -1,17 +1,9 @@
-/**
- * Write pseudocode for the following: Given a string S, sort the characters in the string by
-frequency. For example: “ghjklghjlgjj” → “khhllgggjjjj”. If a frequency is the same, sort
-in alphabetical order. Characters in the string will all be lowercase a-z. Your pseudocode
-should look like code, but does not necessarily have to compile.
- */
-
 package Testing;
 
 import java.util.Arrays;
 
 class temp {
-    public static String freqSort(String str) {
-        /** STRATEGY:
+    /** STRATEGY:
          * create an integer array of size 26 filled with zeroes, where indexes correspond with character positions (a is at 0, z is at 25)
          * for loop iterates over the string to increment elements corresponding with the character
          * implement selection sort to select the minimum values > 0
@@ -19,7 +11,8 @@ class temp {
          *  after selecting each element, set the value to 0
          *  repeat until there's no element > 0, will be run at most 26 times!
          * there you have it.
-         */
+    */
+    public static String freqSort(String str) {
         int[] freq = new int[26]; // frequencies of each char
         for(int i = 0; i < str.length(); i++) // O(n)!
             freq[(int)str.charAt(i)-97]++;
