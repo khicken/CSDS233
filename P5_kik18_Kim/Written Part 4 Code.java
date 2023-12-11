@@ -35,7 +35,7 @@ class temp {
     }
 
     public static void main(String[] args) {
-        String s = "ghjklghjlgjj";
+        String s = "ghjklghjlgfasjhfdoiuytrexcvjj";
         System.out.printf("Testing %s\n", s);
         System.out.println(freqSort(s));
     }
